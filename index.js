@@ -106,8 +106,8 @@ const crawlData = async () => {
 
       console.log(productLink, 'position: ',index, '==== Positive: ', listP.length,' - Negative: ', listN.length)
 
-      fs.writeFileSync('positiveReviews.json', JSON.stringify(listP), 'utf-8')
-      fs.writeFileSync('negativeReviews.json', JSON.stringify(listN), 'utf-8')
+      fs.writeFileSync('./data/positiveReviews.json', JSON.stringify(listP), 'utf-8')
+      fs.writeFileSync('./data/negativeReviews.json', JSON.stringify(listN), 'utf-8')
     }, 30000 * index)
   })
 }
